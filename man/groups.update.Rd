@@ -6,199 +6,214 @@
 \usage{
 groups.update(
   groupUniqueId,
-  primaryLanguage = NULL,
-  whoCanAssignTopics = NULL,
-  sendMessageDenyNotification = NULL,
-  whoCanViewGroup = NULL,
-  whoCanAssistContent = NULL,
-  kind = NULL,
-  showInGroupDirectory = NULL,
-  favoriteRepliesOnTop = NULL,
-  whoCanAddReferences = NULL,
-  allowWebPosting = NULL,
-  default_sender = NULL,
-  whoCanPostAnnouncements = NULL,
-  messageDisplayFont = NULL,
-  whoCanDeleteTopics = NULL,
-  whoCanMoveTopicsOut = NULL,
-  customReplyTo = NULL,
-  isArchived = NULL,
-  whoCanMarkFavoriteReplyOnOwnTopic = NULL,
-  whoCanTakeTopics = NULL,
-  whoCanModifyMembers = NULL,
-  customRolesEnabledForSettingsToBeMerged = NULL,
-  whoCanEnterFreeFormTags = NULL,
-  whoCanContactOwner = NULL,
-  customFooterText = NULL,
-  whoCanLockTopics = NULL,
-  whoCanMarkDuplicate = NULL,
-  includeCustomFooter = NULL,
-  allowGoogleCommunication = NULL,
-  spamModerationLevel = NULL,
-  email = NULL,
-  description = NULL,
-  allowExternalMembers = NULL,
-  whoCanMarkFavoriteReplyOnAnyTopic = NULL,
-  defaultMessageDenyNotificationText = NULL,
-  whoCanApproveMembers = NULL,
-  whoCanViewMembership = NULL,
-  whoCanDeleteAnyPost = NULL,
-  whoCanMarkNoResponseNeeded = NULL,
   whoCanMoveTopicsIn = NULL,
-  enableCollaborativeInbox = NULL,
-  whoCanLeaveGroup = NULL,
-  messageModerationLevel = NULL,
-  whoCanAdd = NULL,
-  maxMessageBytes = NULL,
-  whoCanUnassignTopic = NULL,
-  whoCanApproveMessages = NULL,
-  whoCanUnmarkFavoriteReplyOnAnyTopic = NULL,
-  whoCanPostMessage = NULL,
-  whoCanJoin = NULL,
-  whoCanDiscoverGroup = NULL,
-  name = NULL,
-  archiveOnly = NULL,
-  whoCanHideAbuse = NULL,
+  customReplyTo = NULL,
   whoCanMakeTopicsSticky = NULL,
-  whoCanModerateMembers = NULL,
-  replyTo = NULL,
   includeInGlobalAddressList = NULL,
-  whoCanModerateContent = NULL,
-  whoCanBanUsers = NULL,
+  whoCanLeaveGroup = NULL,
+  whoCanUnassignTopic = NULL,
+  allowWebPosting = NULL,
+  whoCanMarkFavoriteReplyOnAnyTopic = NULL,
+  whoCanDeleteAnyPost = NULL,
+  default_sender = NULL,
+  allowGoogleCommunication = NULL,
+  sendMessageDenyNotification = NULL,
+  whoCanViewMembership = NULL,
+  whoCanMarkDuplicate = NULL,
+  kind = NULL,
+  isArchived = NULL,
+  whoCanAssistContent = NULL,
+  replyTo = NULL,
+  primaryLanguage = NULL,
+  includeCustomFooter = NULL,
+  messageDisplayFont = NULL,
+  whoCanTakeTopics = NULL,
+  whoCanDeleteTopics = NULL,
   membersCanPostAsTheGroup = NULL,
+  whoCanAdd = NULL,
+  customFooterText = NULL,
+  messageModerationLevel = NULL,
+  email = NULL,
+  customRolesEnabledForSettingsToBeMerged = NULL,
+  archiveOnly = NULL,
+  whoCanJoin = NULL,
+  whoCanEnterFreeFormTags = NULL,
+  showInGroupDirectory = NULL,
+  whoCanMoveTopicsOut = NULL,
+  whoCanBanUsers = NULL,
+  whoCanContactOwner = NULL,
   whoCanInvite = NULL,
+  enableCollaborativeInbox = NULL,
+  allowExternalMembers = NULL,
+  whoCanPostMessage = NULL,
+  spamModerationLevel = NULL,
+  whoCanApproveMessages = NULL,
+  whoCanDiscoverGroup = NULL,
+  whoCanHideAbuse = NULL,
+  whoCanApproveMembers = NULL,
+  favoriteRepliesOnTop = NULL,
+  name = NULL,
+  description = NULL,
+  defaultMessageDenyNotificationText = NULL,
   whoCanModifyTagsAndCategories = NULL,
+  whoCanLockTopics = NULL,
+  whoCanViewGroup = NULL,
+  maxMessageBytes = NULL,
+  whoCanMarkFavoriteReplyOnOwnTopic = NULL,
+  whoCanModerateContent = NULL,
+  whoCanAddReferences = NULL,
+  whoCanPostAnnouncements = NULL,
+  whoCanMarkNoResponseNeeded = NULL,
+  whoCanModerateMembers = NULL,
+  whoCanAssignTopics = NULL,
+  whoCanModifyMembers = NULL,
+  whoCanUnmarkFavoriteReplyOnAnyTopic = NULL,
+  alt = NULL,
+  fields = NULL,
+  prettyPrint = NULL,
+  quotaUser = NULL,
+  userIp = NULL,
   gargle_token = gargle::token_fetch(scopes =
-    .endpoints[["groupsSettings.groups.update"]]$scopes),
+    .endpoints[["groupsSettings.groups.update"]]$scopes[[1]]),
   return_response = F
 )
 }
 \arguments{
 \item{groupUniqueId}{The group's email address.}
 
-\item{primaryLanguage}{The primary language for group. For a group's primary language use the language tags from the G Suite languages found at G Suite Email Settings API Email Language Tags.}
-
-\item{whoCanAssignTopics}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to assign topics in a forum to another user. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{sendMessageDenyNotification}{Allows a member to be notified if the member's message to the group is denied by the group owner. Possible values are:  - true: When a message is rejected, send the deny message notification to the message author.The defaultMessageDenyNotificationText property is dependent on the sendMessageDenyNotification property being true. - false: When a message is rejected, no notification is sent.}
-
-\item{whoCanViewGroup}{Permissions to view group messages. Possible values are:  - ANYONE_CAN_VIEW: Any Internet user can view the group's messages.  - ALL_IN_DOMAIN_CAN_VIEW: Anyone in your account can view this group's messages. - ALL_MEMBERS_CAN_VIEW: All group members can view the group's messages. - ALL_MANAGERS_CAN_VIEW: Any group manager can view this group's messages.}
-
-\item{whoCanAssistContent}{Specifies who can moderate metadata. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{kind}{The type of the resource. It is always groupsSettings#groups.}
-
-\item{showInGroupDirectory}{Deprecated. This is merged into the new whoCanDiscoverGroup setting. Allows the group to be visible in the Groups Directory. Possible values are:  - true: All groups in the account are listed in the Groups directory. - false: All groups in the account are not listed in the directory.}
-
-\item{favoriteRepliesOnTop}{Indicates if favorite replies should be displayed above other replies.  - true: Favorite replies will be displayed above other replies. - false: Favorite replies will not be displayed above other replies.}
-
-\item{whoCanAddReferences}{Deprecated. This functionality is no longer supported in the Google Groups UI. The value is always "NONE".}
-
-\item{allowWebPosting}{Allows posting from web. Possible values are:  - true: Allows any member to post to the group forum. - false: Members only use Gmail to communicate with the group.}
-
-\item{default_sender}{Default sender for members who can post messages as the group. Possible values are: - \code{DEFAULT_SELF}: By default messages will be sent from the user - \code{GROUP}: By default messages will be sent from the group}
-
-\item{whoCanPostAnnouncements}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can post announcements, a special topic type. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
-\item{messageDisplayFont}{Deprecated. The default message display font always has a value of "DEFAULT_FONT".}
-
-\item{whoCanDeleteTopics}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete topics. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
-\item{whoCanMoveTopicsOut}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move topics out of the group or forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+\item{whoCanMoveTopicsIn}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move topics into the group or forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
 
 \item{customReplyTo}{An email address used when replying to a message if the replyTo property is set to REPLY_TO_CUSTOM. This address is defined by an account administrator.  - When the group's ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo property holds a custom email address used when replying to a message. - If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo property must have a text value or an error is returned.}
 
-\item{isArchived}{Allows the Group contents to be archived. Possible values are:  - true: Archive messages sent to the group. - false: Do not keep an archive of messages sent to this group. If false, previously archived messages remain in the archive.}
-
-\item{whoCanMarkFavoriteReplyOnOwnTopic}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a post for a topic they started as a favorite reply. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{whoCanTakeTopics}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to take topics in a forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{whoCanModifyMembers}{Deprecated. This is merged into the new whoCanModerateMembers setting. Specifies who can change group members' roles. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
-\item{customRolesEnabledForSettingsToBeMerged}{Specifies whether the group has a custom role that's included in one of the settings being merged. This field is read-only and update/patch requests to it are ignored. Possible values are:  - true - false}
-
-\item{whoCanEnterFreeFormTags}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to enter free form tags for topics in a forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{whoCanContactOwner}{Permission to contact owner of the group via web UI. Possible values are:  - ALL_IN_DOMAIN_CAN_CONTACT - ALL_MANAGERS_CAN_CONTACT - ALL_MEMBERS_CAN_CONTACT - ANYONE_CAN_CONTACT - ALL_OWNERS_CAN_CONTACT}
-
-\item{customFooterText}{Set the content of custom footer text. The maximum number of characters is 1,000.}
-
-\item{whoCanLockTopics}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can prevent users from posting replies to topics. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
-\item{whoCanMarkDuplicate}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic as a duplicate of another topic. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{includeCustomFooter}{Whether to include custom footer. Possible values are:  - true - false}
-
-\item{allowGoogleCommunication}{Deprecated. Allows Google to contact administrator of the group.  - true: Allow Google to contact managers of this group. Occasionally Google may send updates on the latest features, ask for input on new features, or ask for permission to highlight your group. - false: Google can not contact managers of this group.}
-
-\item{spamModerationLevel}{Specifies moderation levels for messages detected as spam. Possible values are:  - ALLOW: Post the message to the group. - MODERATE: Send the message to the moderation queue. This is the default. - SILENTLY_MODERATE: Send the message to the moderation queue, but do not send notification to moderators. - REJECT: Immediately reject the message.}
-
-\item{email}{The group's email address. This property can be updated using the Directory API. Note: Only a group owner can change a group's email address. A group manager can't do this.When you change your group's address using the Directory API or the control panel, you are changing the address your subscribers use to send email and the web address people use to access your group. People can't reach your group by visiting the old address.}
-
-\item{description}{Description of the group. This property value may be an empty string if no group description has been entered. If entered, the maximum group description is no more than 300 characters.}
-
-\item{allowExternalMembers}{Identifies whether members external to your organization can join the group. Possible values are:  - true: G Suite users external to your organization can become members of this group. - false: Users not belonging to the organization are not allowed to become members of this group.}
-
-\item{whoCanMarkFavoriteReplyOnAnyTopic}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark any other user's post as a favorite reply. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{defaultMessageDenyNotificationText}{When a message is rejected, this is text for the rejection notification sent to the message's author. By default, this property is empty and has no value in the API's response body. The maximum notification text size is 10,000 characters. Note: Requires sendMessageDenyNotification property to be true.}
-
-\item{whoCanApproveMembers}{Specifies who can approve members who ask to join groups. This permission will be deprecated once it is merged into the new whoCanModerateMembers setting. Possible values are:  - ALL_MEMBERS_CAN_APPROVE - ALL_MANAGERS_CAN_APPROVE - ALL_OWNERS_CAN_APPROVE - NONE_CAN_APPROVE}
-
-\item{whoCanViewMembership}{Permissions to view membership. Possible values are:  - ALL_IN_DOMAIN_CAN_VIEW: Anyone in the account can view the group members list.If a group already has external members, those members can still send email to this group. - ALL_MEMBERS_CAN_VIEW: The group members can view the group members list. - ALL_MANAGERS_CAN_VIEW: The group managers can view group members list.}
-
-\item{whoCanDeleteAnyPost}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete replies to topics. (Authors can always delete their own posts). Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
-\item{whoCanMarkNoResponseNeeded}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic as not needing a response. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{whoCanMoveTopicsIn}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move topics into the group or forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
-\item{enableCollaborativeInbox}{Specifies whether a collaborative inbox will remain turned on for the group. Possible values are:  - true - false}
-
-\item{whoCanLeaveGroup}{Permission to leave the group. Possible values are:  - ALL_MANAGERS_CAN_LEAVE - ALL_MEMBERS_CAN_LEAVE - NONE_CAN_LEAVE}
-
-\item{messageModerationLevel}{Moderation level of incoming messages. Possible values are:  - MODERATE_ALL_MESSAGES: All messages are sent to the group owner's email address for approval. If approved, the message is sent to the group. - MODERATE_NON_MEMBERS: All messages from non group members are sent to the group owner's email address for approval. If approved, the message is sent to the group. - MODERATE_NEW_MEMBERS: All messages from new members are sent to the group owner's email address for approval. If approved, the message is sent to the group. - MODERATE_NONE: No moderator approval is required. Messages are delivered directly to the group. Note: When the whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the messageModerationLevel be set to MODERATE_NON_MEMBERS to protect the group from possible spam.When memberCanPostAsTheGroup is true, any message moderation settings on individual users or new members will not apply to posts made on behalf of the group.}
-
-\item{whoCanAdd}{Deprecated. This is merged into the new whoCanModerateMembers setting. Permissions to add members. Possible values are:  - ALL_MEMBERS_CAN_ADD: Managers and members can directly add new members. - ALL_MANAGERS_CAN_ADD: Only managers can directly add new members. this includes the group's owner. - ALL_OWNERS_CAN_ADD: Only owners can directly add new members. - NONE_CAN_ADD: No one can directly add new members.}
-
-\item{maxMessageBytes}{Deprecated. The maximum size of a message is 25Mb.}
-
-\item{whoCanUnassignTopic}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unassign any topic in a forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{whoCanApproveMessages}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can approve pending messages in the moderation queue. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
-\item{whoCanUnmarkFavoriteReplyOnAnyTopic}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unmark any post from a favorite reply. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
-
-\item{whoCanPostMessage}{Permissions to post messages. Possible values are:  - NONE_CAN_POST: The group is disabled and archived. No one can post a message to this group.  - When archiveOnly is false, updating whoCanPostMessage to NONE_CAN_POST, results in an error. - If archiveOnly is reverted from true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.  - ALL_MANAGERS_CAN_POST: Managers, including group owners, can post messages. - ALL_MEMBERS_CAN_POST: Any group member can post a message. - ALL_OWNERS_CAN_POST: Only group owners can post a message. - ALL_IN_DOMAIN_CAN_POST: Anyone in the account can post a message.  - ANYONE_CAN_POST: Any Internet user who outside your account can access your Google Groups service and post a message. Note: When whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the messageModerationLevel be set to MODERATE_NON_MEMBERS to protect the group from possible spam.}
-
-\item{whoCanJoin}{Permission to join group. Possible values are:  - ANYONE_CAN_JOIN: Anyone in the account domain can join. This includes accounts with multiple domains. - ALL_IN_DOMAIN_CAN_JOIN: Any Internet user who is outside your domain can access your Google Groups service and view the list of groups in your Groups directory. Warning: Group owners can add external addresses, outside of the domain to their groups. They can also allow people outside your domain to join their groups. If you later disable this option, any external addresses already added to users' groups remain in those groups. - INVITED_CAN_JOIN: Candidates for membership can be invited to join.  - CAN_REQUEST_TO_JOIN: Non members can request an invitation to join.}
-
-\item{whoCanDiscoverGroup}{Specifies the set of users for whom this group is discoverable. Possible values are:  - ANYONE_CAN_DISCOVER - ALL_IN_DOMAIN_CAN_DISCOVER - ALL_MEMBERS_CAN_DISCOVER}
-
-\item{name}{Name of the group, which has a maximum size of 75 characters.}
-
-\item{archiveOnly}{Allows the group to be archived only. Possible values are:  - true: Group is archived and the group is inactive. New messages to this group are rejected. The older archived messages are browseable and searchable.  - If true, the whoCanPostMessage property is set to NONE_CAN_POST.  - If reverted from true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.  - false: The group is active and can receive messages.  - When false, updating whoCanPostMessage to NONE_CAN_POST, results in an error.}
-
-\item{whoCanHideAbuse}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can hide posts by reporting them as abuse. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
 \item{whoCanMakeTopicsSticky}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can make topics appear at the top of the topic list. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
-\item{whoCanModerateMembers}{Specifies who can manage members. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
-
-\item{replyTo}{Specifies who receives the default reply. Possible values are:  - REPLY_TO_CUSTOM: For replies to messages, use the group's custom email address.When the group's ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when replying to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo property must have a value. Otherwise an error is returned. - REPLY_TO_SENDER: The reply sent to author of message. - REPLY_TO_LIST: This reply message is sent to the group. - REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the group's managers. - REPLY_TO_IGNORE: Group users individually decide where the message reply is sent. - REPLY_TO_MANAGERS: This reply message is sent to the group's managers, which includes all managers and the group owner.}
 
 \item{includeInGlobalAddressList}{Enables the group to be included in the Global Address List. For more information, see the help center. Possible values are:  - true: Group is included in the Global Address List. - false: Group is not included in the Global Address List.}
 
-\item{whoCanModerateContent}{Specifies who can moderate content. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+\item{whoCanLeaveGroup}{Permission to leave the group. Possible values are:  - ALL_MANAGERS_CAN_LEAVE - ALL_MEMBERS_CAN_LEAVE - NONE_CAN_LEAVE}
 
-\item{whoCanBanUsers}{Specifies who can deny membership to users. This permission will be deprecated once it is merged into the new whoCanModerateMembers setting. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+\item{whoCanUnassignTopic}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unassign any topic in a forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{allowWebPosting}{Allows posting from web. Possible values are:  - true: Allows any member to post to the group forum. - false: Members only use Gmail to communicate with the group.}
+
+\item{whoCanMarkFavoriteReplyOnAnyTopic}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark any other user's post as a favorite reply. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{whoCanDeleteAnyPost}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete replies to topics. (Authors can always delete their own posts). Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{default_sender}{Default sender for members who can post messages as the group. Possible values are: - \code{DEFAULT_SELF}: By default messages will be sent from the user - \code{GROUP}: By default messages will be sent from the group}
+
+\item{allowGoogleCommunication}{Deprecated. Allows Google to contact administrator of the group.  - true: Allow Google to contact managers of this group. Occasionally Google may send updates on the latest features, ask for input on new features, or ask for permission to highlight your group. - false: Google can not contact managers of this group.}
+
+\item{sendMessageDenyNotification}{Allows a member to be notified if the member's message to the group is denied by the group owner. Possible values are:  - true: When a message is rejected, send the deny message notification to the message author.The defaultMessageDenyNotificationText property is dependent on the sendMessageDenyNotification property being true. - false: When a message is rejected, no notification is sent.}
+
+\item{whoCanViewMembership}{Permissions to view membership. Possible values are:  - ALL_IN_DOMAIN_CAN_VIEW: Anyone in the account can view the group members list.If a group already has external members, those members can still send email to this group. - ALL_MEMBERS_CAN_VIEW: The group members can view the group members list. - ALL_MANAGERS_CAN_VIEW: The group managers can view group members list.}
+
+\item{whoCanMarkDuplicate}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic as a duplicate of another topic. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{kind}{The type of the resource. It is always groupsSettings#groups.}
+
+\item{isArchived}{Allows the Group contents to be archived. Possible values are:  - true: Archive messages sent to the group. - false: Do not keep an archive of messages sent to this group. If false, previously archived messages remain in the archive.}
+
+\item{whoCanAssistContent}{Specifies who can moderate metadata. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{replyTo}{Specifies who receives the default reply. Possible values are:  - REPLY_TO_CUSTOM: For replies to messages, use the group's custom email address.When the group's ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo property holds the custom email address used when replying to a message. If the group's ReplyTo property is set to REPLY_TO_CUSTOM, the customReplyTo property must have a value. Otherwise an error is returned. - REPLY_TO_SENDER: The reply sent to author of message. - REPLY_TO_LIST: This reply message is sent to the group. - REPLY_TO_OWNER: The reply is sent to the owner(s) of the group. This does not include the group's managers. - REPLY_TO_IGNORE: Group users individually decide where the message reply is sent. - REPLY_TO_MANAGERS: This reply message is sent to the group's managers, which includes all managers and the group owner.}
+
+\item{primaryLanguage}{The primary language for group. For a group's primary language use the language tags from the G Suite languages found at G Suite Email Settings API Email Language Tags.}
+
+\item{includeCustomFooter}{Whether to include custom footer. Possible values are:  - true - false}
+
+\item{messageDisplayFont}{Deprecated. The default message display font always has a value of "DEFAULT_FONT".}
+
+\item{whoCanTakeTopics}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to take topics in a forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{whoCanDeleteTopics}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can delete topics. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
 
 \item{membersCanPostAsTheGroup}{Enables members to post messages as the group. Possible values are:  - true: Group member can post messages using the group's email address instead of their own email address. Message appear to originate from the group itself. Note: When true, any message moderation settings on individual users or new members do not apply to posts made on behalf of the group. - false: Members can not post in behalf of the group's email address.}
 
+\item{whoCanAdd}{Deprecated. This is merged into the new whoCanModerateMembers setting. Permissions to add members. Possible values are:  - ALL_MEMBERS_CAN_ADD: Managers and members can directly add new members. - ALL_MANAGERS_CAN_ADD: Only managers can directly add new members. this includes the group's owner. - ALL_OWNERS_CAN_ADD: Only owners can directly add new members. - NONE_CAN_ADD: No one can directly add new members.}
+
+\item{customFooterText}{Set the content of custom footer text. The maximum number of characters is 1,000.}
+
+\item{messageModerationLevel}{Moderation level of incoming messages. Possible values are:  - MODERATE_ALL_MESSAGES: All messages are sent to the group owner's email address for approval. If approved, the message is sent to the group. - MODERATE_NON_MEMBERS: All messages from non group members are sent to the group owner's email address for approval. If approved, the message is sent to the group. - MODERATE_NEW_MEMBERS: All messages from new members are sent to the group owner's email address for approval. If approved, the message is sent to the group. - MODERATE_NONE: No moderator approval is required. Messages are delivered directly to the group. Note: When the whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the messageModerationLevel be set to MODERATE_NON_MEMBERS to protect the group from possible spam.When memberCanPostAsTheGroup is true, any message moderation settings on individual users or new members will not apply to posts made on behalf of the group.}
+
+\item{email}{The group's email address. This property can be updated using the Directory API. Note: Only a group owner can change a group's email address. A group manager can't do this.When you change your group's address using the Directory API or the control panel, you are changing the address your subscribers use to send email and the web address people use to access your group. People can't reach your group by visiting the old address.}
+
+\item{customRolesEnabledForSettingsToBeMerged}{Specifies whether the group has a custom role that's included in one of the settings being merged. This field is read-only and update/patch requests to it are ignored. Possible values are:  - true - false}
+
+\item{archiveOnly}{Allows the group to be archived only. Possible values are:  - true: Group is archived and the group is inactive. New messages to this group are rejected. The older archived messages are browseable and searchable.  - If true, the whoCanPostMessage property is set to NONE_CAN_POST.  - If reverted from true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.  - false: The group is active and can receive messages.  - When false, updating whoCanPostMessage to NONE_CAN_POST, results in an error.}
+
+\item{whoCanJoin}{Permission to join group. Possible values are:  - ANYONE_CAN_JOIN: Anyone in the account domain can join. This includes accounts with multiple domains. - ALL_IN_DOMAIN_CAN_JOIN: Any Internet user who is outside your domain can access your Google Groups service and view the list of groups in your Groups directory. Warning: Group owners can add external addresses, outside of the domain to their groups. They can also allow people outside your domain to join their groups. If you later disable this option, any external addresses already added to users' groups remain in those groups. - INVITED_CAN_JOIN: Candidates for membership can be invited to join.  - CAN_REQUEST_TO_JOIN: Non members can request an invitation to join.}
+
+\item{whoCanEnterFreeFormTags}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to enter free form tags for topics in a forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{showInGroupDirectory}{Deprecated. This is merged into the new whoCanDiscoverGroup setting. Allows the group to be visible in the Groups Directory. Possible values are:  - true: All groups in the account are listed in the Groups directory. - false: All groups in the account are not listed in the directory.}
+
+\item{whoCanMoveTopicsOut}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can move topics out of the group or forum. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{whoCanBanUsers}{Specifies who can deny membership to users. This permission will be deprecated once it is merged into the new whoCanModerateMembers setting. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{whoCanContactOwner}{Permission to contact owner of the group via web UI. Possible values are:  - ALL_IN_DOMAIN_CAN_CONTACT - ALL_MANAGERS_CAN_CONTACT - ALL_MEMBERS_CAN_CONTACT - ANYONE_CAN_CONTACT - ALL_OWNERS_CAN_CONTACT}
+
 \item{whoCanInvite}{Deprecated. This is merged into the new whoCanModerateMembers setting. Permissions to invite new members. Possible values are:  - ALL_MEMBERS_CAN_INVITE: Managers and members can invite a new member candidate. - ALL_MANAGERS_CAN_INVITE: Only managers can invite a new member. This includes the group's owner. - ALL_OWNERS_CAN_INVITE: Only owners can invite a new member. - NONE_CAN_INVITE: No one can invite a new member candidate.}
 
+\item{enableCollaborativeInbox}{Specifies whether a collaborative inbox will remain turned on for the group. Possible values are:  - true - false}
+
+\item{allowExternalMembers}{Identifies whether members external to your organization can join the group. Possible values are:  - true: G Suite users external to your organization can become members of this group. - false: Users not belonging to the organization are not allowed to become members of this group.}
+
+\item{whoCanPostMessage}{Permissions to post messages. Possible values are:  - NONE_CAN_POST: The group is disabled and archived. No one can post a message to this group.  - When archiveOnly is false, updating whoCanPostMessage to NONE_CAN_POST, results in an error. - If archiveOnly is reverted from true to false, whoCanPostMessages is set to ALL_MANAGERS_CAN_POST.  - ALL_MANAGERS_CAN_POST: Managers, including group owners, can post messages. - ALL_MEMBERS_CAN_POST: Any group member can post a message. - ALL_OWNERS_CAN_POST: Only group owners can post a message. - ALL_IN_DOMAIN_CAN_POST: Anyone in the account can post a message.  - ANYONE_CAN_POST: Any Internet user who outside your account can access your Google Groups service and post a message. Note: When whoCanPostMessage is set to ANYONE_CAN_POST, we recommend the messageModerationLevel be set to MODERATE_NON_MEMBERS to protect the group from possible spam.}
+
+\item{spamModerationLevel}{Specifies moderation levels for messages detected as spam. Possible values are:  - ALLOW: Post the message to the group. - MODERATE: Send the message to the moderation queue. This is the default. - SILENTLY_MODERATE: Send the message to the moderation queue, but do not send notification to moderators. - REJECT: Immediately reject the message.}
+
+\item{whoCanApproveMessages}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can approve pending messages in the moderation queue. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{whoCanDiscoverGroup}{Specifies the set of users for whom this group is discoverable. Possible values are:  - ANYONE_CAN_DISCOVER - ALL_IN_DOMAIN_CAN_DISCOVER - ALL_MEMBERS_CAN_DISCOVER}
+
+\item{whoCanHideAbuse}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can hide posts by reporting them as abuse. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{whoCanApproveMembers}{Specifies who can approve members who ask to join groups. This permission will be deprecated once it is merged into the new whoCanModerateMembers setting. Possible values are:  - ALL_MEMBERS_CAN_APPROVE - ALL_MANAGERS_CAN_APPROVE - ALL_OWNERS_CAN_APPROVE - NONE_CAN_APPROVE}
+
+\item{favoriteRepliesOnTop}{Indicates if favorite replies should be displayed above other replies.  - true: Favorite replies will be displayed above other replies. - false: Favorite replies will not be displayed above other replies.}
+
+\item{name}{Name of the group, which has a maximum size of 75 characters.}
+
+\item{description}{Description of the group. This property value may be an empty string if no group description has been entered. If entered, the maximum group description is no more than 300 characters.}
+
+\item{defaultMessageDenyNotificationText}{When a message is rejected, this is text for the rejection notification sent to the message's author. By default, this property is empty and has no value in the API's response body. The maximum notification text size is 10,000 characters. Note: Requires sendMessageDenyNotification property to be true.}
+
 \item{whoCanModifyTagsAndCategories}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to change tags and categories. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{whoCanLockTopics}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can prevent users from posting replies to topics. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{whoCanViewGroup}{Permissions to view group messages. Possible values are:  - ANYONE_CAN_VIEW: Any Internet user can view the group's messages.  - ALL_IN_DOMAIN_CAN_VIEW: Anyone in your account can view this group's messages. - ALL_MEMBERS_CAN_VIEW: All group members can view the group's messages. - ALL_MANAGERS_CAN_VIEW: Any group manager can view this group's messages.}
+
+\item{maxMessageBytes}{Deprecated. The maximum size of a message is 25Mb.}
+
+\item{whoCanMarkFavoriteReplyOnOwnTopic}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a post for a topic they started as a favorite reply. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{whoCanModerateContent}{Specifies who can moderate content. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{whoCanAddReferences}{Deprecated. This functionality is no longer supported in the Google Groups UI. The value is always "NONE".}
+
+\item{whoCanPostAnnouncements}{Deprecated. This is merged into the new whoCanModerateContent setting. Specifies who can post announcements, a special topic type. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{whoCanMarkNoResponseNeeded}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to mark a topic as not needing a response. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{whoCanModerateMembers}{Specifies who can manage members. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{whoCanAssignTopics}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to assign topics in a forum to another user. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{whoCanModifyMembers}{Deprecated. This is merged into the new whoCanModerateMembers setting. Specifies who can change group members' roles. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - OWNERS_ONLY - NONE}
+
+\item{whoCanUnmarkFavoriteReplyOnAnyTopic}{Deprecated. This is merged into the new whoCanAssistContent setting. Permission to unmark any post from a favorite reply. Possible values are:  - ALL_MEMBERS - OWNERS_AND_MANAGERS - MANAGERS_ONLY - OWNERS_ONLY - NONE}
+
+\item{alt}{Data format for the response.}
+
+\item{fields}{Selector specifying which fields to include in a partial response.}
+
+\item{prettyPrint}{Returns response with indentations and line breaks.}
+
+\item{quotaUser}{An opaque string that represents a user for quota purposes. Must not exceed 40 characters.}
+
+\item{userIp}{Deprecated. Please use quotaUser instead.}
 
 \item{gargle_token}{A token prepared by one of gargle's token generating functions. Defaults to gargle::token_fetch(...) with appropriate scopes. See \code{\link[gargle]{token_fetch}} for more info.}
 

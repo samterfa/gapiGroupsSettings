@@ -6,13 +6,28 @@
 \usage{
 groups.get(
   groupUniqueId,
+  alt = NULL,
+  fields = NULL,
+  prettyPrint = NULL,
+  quotaUser = NULL,
+  userIp = NULL,
   gargle_token = gargle::token_fetch(scopes =
-    .endpoints[["groupsSettings.groups.get"]]$scopes),
+    .endpoints[["groupsSettings.groups.get"]]$scopes[[1]]),
   return_response = F
 )
 }
 \arguments{
 \item{groupUniqueId}{The group's email address.}
+
+\item{alt}{Data format for the response.}
+
+\item{fields}{Selector specifying which fields to include in a partial response.}
+
+\item{prettyPrint}{Returns response with indentations and line breaks.}
+
+\item{quotaUser}{An opaque string that represents a user for quota purposes. Must not exceed 40 characters.}
+
+\item{userIp}{Deprecated. Please use quotaUser instead.}
 
 \item{gargle_token}{A token prepared by one of gargle's token generating functions. Defaults to gargle::token_fetch(...) with appropriate scopes. See \code{\link[gargle]{token_fetch}} for more info.}
 
